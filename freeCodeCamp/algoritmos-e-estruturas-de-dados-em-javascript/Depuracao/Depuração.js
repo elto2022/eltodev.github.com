@@ -10,3 +10,4 @@ console.log(a);
 
 
 //Entender a diferença entre o console do freeCodeCamp e do navegador
+let
