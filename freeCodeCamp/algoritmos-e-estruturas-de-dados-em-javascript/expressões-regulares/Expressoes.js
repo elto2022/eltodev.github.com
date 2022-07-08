@@ -109,4 +109,59 @@ let nonAlphabetRegex = /\W/g; // Altere esta linha
 let result18 = quoteSample.match(nonAlphabetRegex).length;
 //tem o g de global
 
+//Capturar todos os números
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g; // Altere esta linha
+let result19 = movieName.match(numRegex).length;
+//tem o g de global
+
+
+
+//Capturar tudo exceto números
+let movieName1 = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // Altere esta linha
+let result20 = movieName.match(noNumRegex).length;
+// g
+
+
+//
+
+
+
+//Capturar espaços em branco
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Altere esta linha
+let result21 = sample.match(countWhiteSpace);
+// g
+
+//Capturar caracteres além do espaço
+let sample1 = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/g; // Altere esta linha
+let result22 = sample.match(countNonWhiteSpace);
+//  g
+
+//
+
+
+
+//Verificar existência
+let favWord = "favorite";
+let favRegex = /favou?rite/; // Altere esta linha
+let result24 = favRegex.test(favWord);
+
+
+
+//
+
+
+
+//
+
+
+//
+
+
+//
+
+
 //
