@@ -74,4 +74,41 @@ function getNine() {
 
 
   //Capturar argumentos passados na ordem errada ao chamar uma função
+  function raiseToPower(b, e) {
+    return Math.pow(b, e);
+  }
   
+  let base = 2;
+  let exp = 3;
+  let power = raiseToPower(base, exp);
+  console.log(power);
+
+
+
+  //Capturar erros de fora por um ao usar a indexação
+  function countToFive() {
+    let firstFive = "12345";
+    let len = firstFive.length;
+    // Altere apenas o código abaixo desta linha
+    for (let i = 0; i < len; i++) {
+    // Altere apenas o código acima desta linha
+      console.log(firstFive[i]);
+    }
+  }
+  
+  countToFive();
+
+
+
+  //Ter cuidado quando reinicializar variáveis dentro de laços
+  
+
+
+
+  //Prevenir laços infinitos com uma condição de término válida
+  function myFunc() {
+    for (let i = 1; i <= 4; i += 2) {
+  
+      console.log("Still going!");
+    }
+  }
