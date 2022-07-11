@@ -36,4 +36,79 @@ function mixedNumbers(arr) {
 
 
 
-  //
+  //Remover itens usando splice()
+  const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+// Altere apenas o código abaixo desta linha
+arr.splice(1, 4);
+// Altere apenas o código acima desta linha
+console.log(arr);
+
+
+
+//Adicionar e remover itens usando splice()
+function htmlColorNames(arr) {
+  // Altere apenas o código abaixo desta linha
+arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond');
+  // Altere apenas o código acima desta linha
+  return arr;
+}
+
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+
+
+//Copiar itens de um array usando slice()
+function forecast(arr) {
+  // Altere apenas o código abaixo desta linha
+
+  return arr.slice(2, 4);
+}
+
+// Altere apenas o código acima desta linha
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+
+
+//Copiar um array com o operador spread
+
+
+
+
+//Combinar arrays com o operador spread
+function spreadOut() {
+  let fragment = ['to', 'code'];
+  let sentence = ['learning',...fragment, 'is', 'fun']; // Altere esta linha
+  return sentence;
+}
+
+console.log(spreadOut());
+
+
+
+//Verificar a presença de um elemento com indexOf()
+
+
+
+
+//Iterar através de todos os itens de um array usando laços for
+
+
+
+//Criar arrays multidimensionais complexos
+
+
+
+//Adicionar pares de chave-valor a objetos JavaScript
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28
+};
+
+// Altere apenas o código abaixo desta linha
+  foods.bananas = 13;
+  foods.grapes = 35;
+  foods.strawberries = 27;
+// Altere apenas o código acima desta linha
+
+console.log(foods);
