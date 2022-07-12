@@ -112,3 +112,49 @@ let foods = {
 // Altere apenas o código acima desta linha
 
 console.log(foods);
+
+
+
+//Modificar um objeto aninhado dentro de um objeto
+let userActivity = {
+  id: 23894201352,
+  date: 'January 1, 2017',
+  data: {
+    totalUsers: 51,
+    online: 42
+  }
+};
+
+// Altere apenas o código abaixo desta linha
+  userActivity.data.online = 45;
+// Altere apenas o código acima desta linha
+
+console.log(userActivity);
+
+
+
+//Acessar nomes de propriedades com notação de colchetes
+
+
+
+//Usar a palavra-chave delete para remover propriedades de objetos
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+// Altere apenas o código abaixo desta linha
+  delete foods.oranges;
+  delete foods.plums;
+  delete foods.strawberries;
+// Altere apenas o código acima desta linha
+
+console.log(foods);
+
+
+
+//
