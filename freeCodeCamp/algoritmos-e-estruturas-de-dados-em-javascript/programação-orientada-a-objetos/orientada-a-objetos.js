@@ -1,10 +1,10 @@
-// // Criar um objeto JavaScript básico
+// // Criar um objeto JavaScript básico // //
 let dog = {
   name: "samurá",
   numLegs: 4,
 };
 
-// // Usar notação de ponto para acessar as propriedades de um objeto
+// // Usar notação de ponto para acessar as propriedades de um objeto // //
 let dog1 = {
   name: "Spot",
   numLegs: 4,
@@ -13,7 +13,7 @@ let dog1 = {
 console.log(dog1.name);
 console.log(dog1.numLegs);
 
-// // Criar um método em um objeto
+// // Criar um método em um objeto // //
 let dog2 = {
   name: "Spot",
   numLegs: 4,
@@ -24,7 +24,7 @@ let dog2 = {
 
 dog2.sayLegs();
 
-// // Fazer código mais reutilizável com a palavra-chave this
+// // Fazer código mais reutilizável com a palavra-chave this // //
 let dog3 = {
   name: "Spot",
   numLegs: 4,
@@ -35,14 +35,14 @@ let dog3 = {
 
 dog3.sayLegs();
 
-// // Definir uma função construtora
+// // Definir uma função construtora // //
 function Dog() {
   this.name = "Samurá";
   this.color = "marrom";
   this.numLegs = 4;
 }
 
-// // Usar um construtor para criar objetos
+// // Usar um construtor para criar objetos // //
 function Dog1() {
   this.name = "Rupert";
   this.color = "brown";
@@ -51,7 +51,7 @@ function Dog1() {
 // Altere apenas o código abaixo desta linha
 let hound = new Dog1();
 
-// // Estender construtores para receber argumentos
+// // Estender construtores para receber argumentos // //
 function Dog2(name, color) {
   this.name = name;
   this.color = color;
@@ -60,7 +60,7 @@ function Dog2(name, color) {
 
 let terrier = new Dog2();
 
-// // Verificar o construtor de um objeto com instanceof
+// // Verificar o construtor de um objeto com instanceof // //
 function House(numBedrooms) {
   this.numBedrooms = numBedrooms;
 }
@@ -72,7 +72,7 @@ let myHouse = {
 
 myHouse instanceof House;
 
-// // Entender propriedades próprias
+// // Entender propriedades próprias // //
 function Bird(name) {
   this.name = name;
   this.numLegs = 2;
@@ -89,7 +89,7 @@ for (let property in canary) {
 
 console.log(ownProps);
 
-// // Usar propriedades de protótipos para reduzir código duplicado
+// // Usar propriedades de protótipos para reduzir código duplicado // //
 function Dog3(name) {
   this.name = name; //own property
 }
@@ -98,7 +98,7 @@ Dog3.prototype.numLegs = 4; // prototype property
 // Altere apenas o código acima desta linha
 let beagle = new Dog3("Snoopy");
 
-// // Iterar sobre todas as propriedades
+// // Iterar sobre todas as propriedades // //
 function Dog4(name) {
   this.name = name;
 }
@@ -110,7 +110,7 @@ let beagle1 = new Dog4("Snoopy");
 let ownProps1 = [];
 let prototypeProps = [];
 
-// // Altere apenas o código abaixo desta linha
+// // Altere apenas o código abaixo desta linha // //
 for (let property in beagle) {
   if (beagle.hasOwnProperty(property)) {
     ownProps.push(property);
@@ -127,7 +127,7 @@ function Dog5(name) {
   this.name = name;
 }
 
-// // Altere apenas o código abaixo desta linha
+// // Altere apenas o código abaixo desta linha // //
 function joinDogFraternity(candidate) {
   if (candidate.constructor === Dog5) {
     return true;
@@ -136,7 +136,7 @@ function joinDogFraternity(candidate) {
   }
 }
 
-// // Mudar o protótipo para um novo objeto
+// // Mudar o protótipo para um novo objeto // //
 function Dog6(name) {
   this.name = name;
 }
@@ -146,31 +146,45 @@ Dog6.prototype = {
   numLegs: 4,
   eat: function () {},
   describe: function () {},
-  
-  };// //Lembrar de definir a propriedade construtora quando alterar o protótipothis.name = name;
+};
 
+// //Lembrar de definir a propriedade construtora quando alterar o protótipo // //
+function Dog7(name) {
+  this.name = name; //<-
+}
 
-  function Dog7(name) {
-    this.name = name;
-  }
-  
-  // Altere apenas o código abaixo desta linha
-  Dog7.prototype = {
-    constructor: Dog7,  //<-
-    numLegs: 4,
-    eat: function() {
-      console.log("nom nom nom");
-    },
-    describe: function() {
-      console.log("My name is " + this.name);
-    }
-  };
-  // // Entender de onde vem o protótipo de um objeto
-  function Dog8(name) {
-    this.name = name;
-  }
-  
-  let beagle2 = new Dog8("Snoopy");
-  
-  // Altere apenas o código abaixo desta linha
-  Dog8.prototype.isPrototypeOf(beagle2);
+// Altere apenas o código abaixo desta linha
+Dog7.prototype = {
+  constructor: Dog7, //<-
+  numLegs: 4,
+  eat: function () {
+    console.log("nom nom nom");
+  },
+  describe: function () {
+    console.log("My name is " + this.name);
+  },
+};
+
+// // Entender de onde vem o protótipo de um objeto // //
+function Dog8(name) {
+  this.name = name;
+}
+
+let beagle2 = new Dog8("Snoopy");
+
+// Altere apenas o código abaixo desta linha
+Dog8.prototype.isPrototypeOf(beagle2);
+
+// // Entender a cadeia de protótipos // //
+function Dog(name) {
+  this.name = name;
+}
+
+let beagle3 = new Dog("Snoopy");
+
+Dog.prototype.isPrototypeOf(beagle3); // retorna verdadeiro
+
+// Corrija o código abaixo para que ele seja avaliado como verdadeiro
+Object.prototype.isPrototypeOf(Dog.prototype);
+
+// // Utilizar herança para não se repetir  // //
