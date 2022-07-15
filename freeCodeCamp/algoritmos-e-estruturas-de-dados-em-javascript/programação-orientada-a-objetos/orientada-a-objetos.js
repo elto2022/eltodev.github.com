@@ -138,18 +138,39 @@ function joinDogFraternity(candidate) {
 
 // // Mudar o protótipo para um novo objeto
 function Dog6(name) {
+  this.name = name;
+}
+
+Dog6.prototype = {
+  // Altere apenas o código abaixo desta linha
+  numLegs: 4,
+  eat: function () {},
+  describe: function () {},
+  
+  };// //Lembrar de definir a propriedade construtora quando alterar o protótipothis.name = name;
+
+
+  function Dog7(name) {
     this.name = name;
   }
   
-  Dog6.prototype = {
-    // Altere apenas o código abaixo desta linha
-  numLegs: 4,
-  eat: function() {
-   },
-  describe: function() {
-   } 
+  // Altere apenas o código abaixo desta linha
+  Dog7.prototype = {
+    constructor: Dog7,  //<-
+    numLegs: 4,
+    eat: function() {
+      console.log("nom nom nom");
+    },
+    describe: function() {
+      console.log("My name is " + this.name);
+    }
   };
-
-
-  // //Lembrar de definir a propriedade construtora quando alterar o protótipo
+  // // Entender de onde vem o protótipo de um objeto
+  function Dog8(name) {
+    this.name = name;
+  }
   
+  let beagle2 = new Dog8("Snoopy");
+  
+  // Altere apenas o código abaixo desta linha
+  Dog8.prototype.isPrototypeOf(beagle2);
